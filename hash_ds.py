@@ -43,13 +43,6 @@ key_path = "key.txt"
 key = read_and_clean_file(key_path)
 
 print("[hash_ds.py] performing hashing...")
-# df = read_file('yourfile.xlsx')
-# df = read_file('yourfile.sas7bdat')
-# df = read_file('yourfile.psv')
-
-# Example usage
-#data = {'usernames': ['user1', 'user2', 'user3']}
-#df = pd.DataFrame(data)
 df = read_file('testdata/data2.csv')
 hashed_df = hash_and_truncate_hmac_swifter(df, 'usernames', key)
 print(hashed_df)
