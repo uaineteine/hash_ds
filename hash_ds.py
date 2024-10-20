@@ -39,14 +39,16 @@ def main():
     parser.add_argument('filepath', type=str, help='Path to the file to hash')
     parser.add_argument('columns', type=str, help='Comma-separated list of columns to hash')
     parser.add_argument('key', type=str, help='Key for hashing')
+    parser.add_argument('length', type=int, help='Length of hash to truncate to')
     
     args = parser.parse_args()
     filepath = args.filepath
     columns = args.columns.split(',')
     key = args.key
+    length = args.length
 
     df = read_file(filepath)
-    hashed_df = hash_and_truncate_hmac_swifter(df, columns, key)
+    hashed_df = hash_and_truncate_hmac_swifter(df, columns, key, length=length)
     print(hashed_df)
 
 if __name__ == "__main__":
