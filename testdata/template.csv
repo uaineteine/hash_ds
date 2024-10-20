@@ -1,2 +1,3 @@
 Input_file_path,Meta_file_path
 testdata/data1.psv,testdata/data_DIL.csv
+testdata/data2.csv,testdata/data_DIL.csv
