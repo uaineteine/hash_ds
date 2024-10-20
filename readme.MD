@@ -2,7 +2,7 @@
 
 [![Test hash_ds.py](https://github.com/uaineteine/hash_ds/actions/workflows/test_hash_ds.yml/badge.svg)](https://github.com/uaineteine/hash_ds/actions/workflows/test_hash_ds.yml)
 
-A tool to hash dataframes on a list of variables and a key. The python script it multi-threaded to optimise to the number of user cores that are available.
+A tool to hash dataframes on a list of variables and a key. The python script it multi-threaded to optimise the execution to the number of user cores that are available.
 
 ## Example execute
 
