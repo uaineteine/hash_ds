@@ -29,8 +29,20 @@ def read_file(filepath):
     else:
         raise ValueError("Unsupported file extension")
 
-print("[hash_ds.py] performing hashing...")
+def read_and_clean_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        content = file.read()
+    
+    # Remove additional empty lines and trailing whitespace
+    cleaned_content = "\n".join([line.rstrip() for line in content.splitlines() if line.strip()])
+    
+    return cleaned_content
 
+print("[hash_ds.py] reading hash_key from file")
+key_path = "key.txt"
+key = read_and_clean_file(key_path)
+
+print("[hash_ds.py] performing hashing...")
 # df = read_file('yourfile.xlsx')
 # df = read_file('yourfile.sas7bdat')
 # df = read_file('yourfile.psv')
@@ -39,12 +51,12 @@ print("[hash_ds.py] performing hashing...")
 #data = {'usernames': ['user1', 'user2', 'user3']}
 #df = pd.DataFrame(data)
 df = read_file('testdata/data2.csv')
-hashed_df = hash_and_truncate_hmac_swifter(df, 'usernames', 'my_secret_key')
+hashed_df = hash_and_truncate_hmac_swifter(df, 'usernames', key)
 print(hashed_df)
 
 print("hashing second set")
 df = read_file('testdata/data1.psv')
-hashed_df = hash_and_truncate_hmac_swifter(df, 'usernames', 'my_secret_key')
+hashed_df = hash_and_truncate_hmac_swifter(df, 'usernames', key)
 print(hashed_df)
 
 
