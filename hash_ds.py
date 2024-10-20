@@ -1,9 +1,4 @@
-print("[hash_ds.py] importing libraries...")
-import pandas as pd
-import hmac
-import hashlib
-import swifter
-from multiprocessing import cpu_count
+from libs import *
 
 print("[hash_ds.py] defining functions...")
 def hmac_and_truncate_value(value, key, length=24):
