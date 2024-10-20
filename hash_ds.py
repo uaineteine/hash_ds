@@ -47,6 +47,10 @@ template = read_file("testdata/template.csv")
 print(template)
 
 print("[hash_ds.py] performing hashing...")
+for i, fname in enumerate(template["Input_file_path"]):
+    mname = template["Meta_file_path"][i] #metaname, at ith row
+    meta = read_file(mname)
+
 df = read_file('testdata/data2.csv')
 hashed_df = hash_and_truncate_hmac_swifter(df, 'usernames', key)
 print(hashed_df)
