@@ -22,4 +22,4 @@ jobs:
 
     - name: Run tests
       run: |
-        python hash_ds.py testdata/data1.psv usernames,Header2 secret_key 24
+        python hash_ds.py testdata/data1.psv usernames,Header2 secret_key 24 test.parquet

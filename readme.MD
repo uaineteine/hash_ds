@@ -9,7 +9,7 @@ A tool to hash dataframes on a list of variables and a key. The python script it
 One can select the truncation limit for this output
 
 ```ps
-python -m hash_ds testdata/data1.psv usernames,Header2 secret_key 10
+python -m hash_ds testdata/data1.psv usernames,Header2 secret_key 10 test.parquet
 ```
 
 ## Package Requirements
