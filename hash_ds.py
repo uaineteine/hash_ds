@@ -12,21 +12,6 @@ def hash_and_truncate_hmac_swifter(df, columns, key, length=24):
         df[new_col_name] = df[column].swifter.set_npartitions(cpu_count()).apply(lambda x: hmac_and_truncate_value(x, key, length))
     return df
 
-def read_file(filepath):
-    format = filepath.split('.')[-1]
-    if format == "csv":
-        return pd.read_csv(filepath)
-    elif format in ("xlsx", "xls"):
-        return pd.read_excel(filepath)
-    elif format == "sas7bdat":
-        return pd.read_sas(filepath)
-    elif format == "psv":
-        return pd.read_csv(filepath, delimiter='|')
-    elif format == "parquet":
-        return pd.read_parquet(filepath)
-    else:
-        raise ValueError("Unsupported file extension")
-
 def main():
     parser = argparse.ArgumentParser(description="Hash specified columns of a file")
     parser.add_argument('filepath', type=str, help='Path to the file to hash')
