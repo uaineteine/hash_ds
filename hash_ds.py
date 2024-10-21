@@ -25,15 +25,6 @@ def read_file(filepath):
     else:
         raise ValueError("Unsupported file extension")
 
-def read_and_clean_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        content = file.read()
-    
-    # Remove additional empty lines and trailing whitespace
-    cleaned_content = "\n".join([line.rstrip() for line in content.splitlines() if line.strip()])
-    
-    return cleaned_content
-
 def main():
     parser = argparse.ArgumentParser(description="Hash specified columns of a file")
     parser.add_argument('filepath', type=str, help='Path to the file to hash')
