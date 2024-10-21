@@ -22,6 +22,8 @@ def read_file(filepath):
         return pd.read_sas(filepath)
     elif format == "psv":
         return pd.read_csv(filepath, delimiter='|')
+    elif format == "parquet":
+        return pd.read_parquet(filepath)
     else:
         raise ValueError("Unsupported file extension")
 
