@@ -54,10 +54,6 @@ def main():
 if __name__ == "__main__":
     main()
 
-# print("[hash_ds.py] reading hash_key from file")
-# key_path = "key.txt"
-# key = read_and_clean_file(key_path)
-
 # print("[hash_ds.py] reading template from file")
 # template = read_file("testdata/template.csv")
 # print(template)
