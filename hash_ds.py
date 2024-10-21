@@ -1,6 +1,6 @@
 from libs import *
 
-print("[hash_ds.py] defining functions...")
+print("[hash_ds::.py] defining functions...")
 def hmac_and_truncate_value(value, key, length=24):
     hashed_value = hmac.new(key.encode(), str(value).encode(), hashlib.sha256).hexdigest()
     return hashed_value[:length]
