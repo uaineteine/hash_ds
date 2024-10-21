@@ -1,3 +1,5 @@
+import pandas as pd
+
 def read_file(filepath):
     format = filepath.split('.')[-1]
     if format == "csv":
