@@ -11,3 +11,10 @@ One can select the truncation limit for this output
 ```ps
 python -m hash_ds testdata/data1.psv usernames,Header2 secret_key 10
 ```
+
+## Package Requirements
+
+* pandas
+* swifter
+
+## GNU Licence
