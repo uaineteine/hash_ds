@@ -23,3 +23,7 @@ jobs:
     - name: Run tests
       run: |
         python hash_ds.py testdata/data1.psv usernames,Header2 secret_key 24 test.parquet
+
+    - name: Validate output
+      run: |
+        [ ! -f test.parquet ] && echo "File test.parquet does not exists"
