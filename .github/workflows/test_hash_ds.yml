@@ -26,4 +26,4 @@ jobs:
 
     - name: Validate output
       run: |
-        [ ! -f test.parquet ] && echo "File test.parquet does not exists"
+        ls test.parquet
