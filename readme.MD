@@ -14,6 +14,7 @@ python -m hash_ds testdata/data1.psv usernames,Header2 secret_key 10 test.parque
 
 ## Package Requirements
 
+* numpy
 * pandas
 * swifter
 * pyarrow
