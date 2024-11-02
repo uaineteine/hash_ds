@@ -11,7 +11,7 @@ def hash_and_truncate_hmac_swifter(df, columns, key, length=24):
     print(f"Using up to {n_tds} threads")
     for column in columns:
         new_col_name = column + "_hash"
-        df[new_col_name] = df[column].swifter.set_npartitions(n_tds).apply(lambda x: hmac_and_truncate_value(x, key, length), meta=(new_col_name, 'str'))
+        df[new_col_name] = df[column].swifter.set_npartitions(n_tds).apply(lambda x: hmac_and_truncate_value(x, key, length))
     return df
 
 def main():
