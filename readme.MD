@@ -1,4 +1,4 @@
-## HASH_DS
+## HASH_DS 1.0.1
 
 [![Test hash_ds.py](https://github.com/uaineteine/hash_ds/actions/workflows/test_hash_ds.yml/badge.svg)](https://github.com/uaineteine/hash_ds/actions/workflows/test_hash_ds.yml)
 

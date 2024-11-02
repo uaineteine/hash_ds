@@ -1,6 +1,7 @@
 print("[hash_ds::libs.py] importing libraries...")
 import argparse
 import pandas as pd
+import numpy as np
 import hmac
 import hashlib
 import swifter
